@@ -167,7 +167,7 @@
 .pc-details p {
   margin: 12px 0 0;
   color: rgba(255, 255, 255, 0.7);
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.16em;
 }
@@ -218,8 +218,8 @@
 
 .pc-handle,
 .pc-status {
-  font-size: 9px;
-  line-height: 1;
+  font-size: 11px;
+  line-height: 1.1;
 }
 
 .pc-handle {
@@ -239,7 +239,7 @@
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.08);
   font: inherit;
-  font-size: 9px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
   transition:
