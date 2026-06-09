@@ -5,7 +5,6 @@ import React, {
   useRef,
 } from "react";
 
-import BorderGlow from "../BorderGlow/BorderGlow";
 import "./ProfileCard.css";
 
 const DEFAULT_INNER_GRADIENT =
@@ -205,26 +204,13 @@ function ProfileCardComponent({
                       <div className="pc-status">{status}</div>
                     </div>
                   </div>
-                  <BorderGlow
-                    className="pc-contact-border-glow"
-                    edgeSensitivity={10}
-                    glowColor="24 100 76"
-                    backgroundColor="rgba(255, 255, 255, 0.04)"
-                    borderRadius={10}
-                    glowRadius={12}
-                    glowIntensity={1.1}
-                    coneSpread={30}
-                    fillOpacity={0.14}
-                    colors={["#0205fc", "#f5e400", "#ff0202"]}
+                  <button
+                    className="pc-contact-btn"
+                    onClick={onContactClick}
+                    type="button"
                   >
-                    <button
-                      className="pc-contact-btn"
-                      onClick={onContactClick}
-                      type="button"
-                    >
-                      {contactText}
-                    </button>
-                  </BorderGlow>
+                    {contactText}
+                  </button>
                 </div>
               )}
             </div>
