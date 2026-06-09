@@ -461,21 +461,19 @@ main {
 
 .section-label {
   display: flex;
-  min-height: 66px;
-  align-items: center;
   justify-content: space-between;
-  padding: 20px 24px;
+  padding: 16px 18px;
   border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 22px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.07);
   -webkit-backdrop-filter: blur(14px) saturate(1.25);
   backdrop-filter: blur(14px) saturate(1.25);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.2),
     0 12px 32px rgba(0, 0, 0, 0.14);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.17em;
 }
 
 .section-label--light {
@@ -1034,19 +1032,17 @@ main {
 
 .contact__top {
   display: flex;
-  min-height: 66px;
-  align-items: center;
   justify-content: space-between;
   align-self: start;
-  padding: 20px 24px;
+  padding: 16px 18px;
   border: 1px solid rgba(255, 255, 255, 0.28);
-  border-radius: 22px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.08);
   -webkit-backdrop-filter: blur(16px) saturate(1.3);
   backdrop-filter: blur(16px) saturate(1.3);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.16em;
 }
 
 .contact__main {
@@ -1265,13 +1261,6 @@ main {
 
   .nav-contact {
     grid-column: 3;
-  }
-
-  .section-label,
-  .contact__top {
-    min-height: 60px;
-    padding: 18px 20px;
-    font-size: 13px;
   }
 
   .hero__eyebrow {
