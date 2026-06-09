@@ -248,6 +248,19 @@
     transform 200ms ease;
 }
 
+.pc-contact-border-glow {
+  background: transparent;
+  box-shadow: none;
+}
+
+.pc-contact-border-glow .border-glow-inner {
+  overflow: visible;
+}
+
+.pc-contact-border-glow .pc-contact-btn {
+  border-radius: inherit;
+}
+
 .pc-contact-btn:hover {
   color: #0b1022;
   background: rgba(255, 255, 255, 0.88);

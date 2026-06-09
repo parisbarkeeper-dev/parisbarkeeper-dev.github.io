@@ -111,6 +111,28 @@ const Arrow = ({ diagonal = false }) => (
   </svg>
 );
 
+const ButtonGlow = ({
+  children,
+  className = "",
+  borderRadius = 18,
+  glowRadius = 18,
+}) => (
+  <BorderGlow
+    className={`button-border-glow ${className}`.trim()}
+    edgeSensitivity={12}
+    glowColor="24 100 76"
+    backgroundColor="rgba(8, 9, 14, 0.18)"
+    borderRadius={borderRadius}
+    glowRadius={glowRadius}
+    glowIntensity={1.15}
+    coneSpread={28}
+    fillOpacity={0.14}
+    colors={["#0205fc", "#f5e400", "#ff0202"]}
+  >
+    {children}
+  </BorderGlow>
+);
+
 function App() {
   useEffect(() => {
     const textSelectors = [
@@ -211,24 +233,26 @@ function App() {
           <a href="#work">项目</a>
           <a href="#strengths">优势</a>
         </nav>
-        <GlassSurface
-          width={132}
-          height={48}
-          borderRadius={24}
-          brightness={70}
-          backgroundOpacity={0.08}
-          saturation={1.4}
-          distortionScale={-120}
-          redOffset={4}
-          greenOffset={12}
-          blueOffset={22}
-          mixBlendMode="screen"
-          className="nav-contact-glass"
-        >
-          <a className="nav-contact" href="#contact">
-            联系我 <Arrow />
-          </a>
-        </GlassSurface>
+        <ButtonGlow className="nav-contact-border-glow" borderRadius={24}>
+          <GlassSurface
+            width={132}
+            height={48}
+            borderRadius={24}
+            brightness={70}
+            backgroundOpacity={0.08}
+            saturation={1.4}
+            distortionScale={-120}
+            redOffset={4}
+            greenOffset={12}
+            blueOffset={22}
+            mixBlendMode="screen"
+            className="nav-contact-glass"
+          >
+            <a className="nav-contact" href="#contact">
+              联系我 <Arrow />
+            </a>
+          </GlassSurface>
+        </ButtonGlow>
       </header>
 
       <section className="hero" id="top">
@@ -250,24 +274,30 @@ function App() {
               <br />
               构建清晰、准确、有质感的设计表达。
             </p>
-            <GlassSurface
-              width={72}
-              height={72}
-              borderRadius={36}
-              brightness={72}
-              backgroundOpacity={0.05}
-              saturation={1.5}
-              distortionScale={-95}
-              redOffset={4}
-              greenOffset={14}
-              blueOffset={24}
-              mixBlendMode="screen"
-              className="hero-cta-glass"
-            >
-              <a href="#work" className="circle-link" aria-label="查看精选项目">
-                <Arrow diagonal />
-              </a>
-            </GlassSurface>
+            <ButtonGlow className="hero-cta-border-glow" borderRadius={36}>
+              <GlassSurface
+                width={72}
+                height={72}
+                borderRadius={36}
+                brightness={72}
+                backgroundOpacity={0.05}
+                saturation={1.5}
+                distortionScale={-95}
+                redOffset={4}
+                greenOffset={14}
+                blueOffset={24}
+                mixBlendMode="screen"
+                className="hero-cta-glass"
+              >
+                <a
+                  href="#work"
+                  className="circle-link"
+                  aria-label="查看精选项目"
+                >
+                  <Arrow diagonal />
+                </a>
+              </GlassSurface>
+            </ButtonGlow>
             <span className="hero__index">PORTFOLIO / 26</span>
           </div>
         </div>
@@ -387,9 +417,15 @@ function App() {
                     fetchPriority="low"
                   />
                   <span className="project__id">{project.id}</span>
-                  <span className="project__view">
-                    VIEW <Arrow diagonal />
-                  </span>
+                  <ButtonGlow
+                    className="project-view-border-glow"
+                    borderRadius={12}
+                    glowRadius={14}
+                  >
+                    <span className="project__view">
+                      VIEW <Arrow diagonal />
+                    </span>
+                  </ButtonGlow>
                 </div>
                 <div className="project__meta">
                   <div>
@@ -481,14 +517,20 @@ function App() {
                 <br />
                 <span>TALK.</span>
               </h2>
-              <a
-                href="mailto:parisbarkeeper@gmail.com"
-                className="contact__mail"
+              <ButtonGlow
+                className="contact-mail-border-glow"
+                borderRadius={20}
+                glowRadius={22}
               >
-                <span>发送邮件</span>
-                <strong>parisbarkeeper@gmail.com</strong>
-                <Arrow diagonal />
-              </a>
+                <a
+                  href="mailto:parisbarkeeper@gmail.com"
+                  className="contact__mail"
+                >
+                  <span>发送邮件</span>
+                  <strong>parisbarkeeper@gmail.com</strong>
+                  <Arrow diagonal />
+                </a>
+              </ButtonGlow>
             </div>
             <div className="contact__profile">
               <ProfileCard

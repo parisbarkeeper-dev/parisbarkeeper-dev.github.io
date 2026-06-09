@@ -250,7 +250,27 @@ main {
 
 .nav-contact-glass {
   isolation: isolate;
+}
+
+.button-border-glow {
+  width: fit-content;
+  min-height: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.button-border-glow .border-glow-inner {
+  width: 100%;
+  overflow: visible;
+}
+
+.nav-contact-border-glow {
   justify-self: end;
+}
+
+.nav-contact-border-glow .border-glow-inner,
+.hero-cta-border-glow .border-glow-inner {
+  border-radius: inherit;
 }
 
 .nav-contact-glass .glass-surface__content {
@@ -410,6 +430,10 @@ main {
   transition:
     transform 280ms ease,
     box-shadow 280ms ease;
+}
+
+.hero-cta-border-glow {
+  border-radius: 50%;
 }
 
 .hero-cta-glass:hover {
@@ -779,10 +803,17 @@ main {
     transform 220ms ease;
 }
 
-.project__view {
+.project-view-border-glow {
   position: absolute;
   right: 18px;
   bottom: 18px;
+  color: var(--ink);
+  background: transparent;
+  transform: translateY(72px);
+  transition: transform 250ms ease;
+}
+
+.project__view {
   display: flex;
   gap: 8px;
   align-items: center;
@@ -792,11 +823,10 @@ main {
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.14em;
-  transform: translateY(72px);
-  transition: transform 250ms ease;
+  border-radius: inherit;
 }
 
-.project:hover .project__view {
+.project:hover .project-view-border-glow {
   transform: translateY(0);
 }
 
@@ -1047,7 +1077,7 @@ main {
   grid-template-columns: 1fr auto auto;
   gap: 24px;
   align-items: center;
-  margin-top: 76px;
+  width: 100%;
   padding: 26px 24px;
   border: 1px solid rgba(255, 255, 255, 0.34);
   border-radius: 20px;
@@ -1060,6 +1090,15 @@ main {
     color 300ms ease,
     background-size 300ms cubic-bezier(0.2, 0.7, 0.2, 1),
     padding 300ms ease;
+}
+
+.contact-mail-border-glow {
+  width: 100%;
+  margin-top: 76px;
+}
+
+.contact-mail-border-glow .border-glow-inner {
+  width: 100%;
 }
 
 .contact__profile {
