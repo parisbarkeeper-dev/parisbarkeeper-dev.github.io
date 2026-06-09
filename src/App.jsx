@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Aurora from "./components/Aurora/Aurora";
+import BorderGlow from "./components/BorderGlow/BorderGlow";
 import GlassSurface from "./components/GlassSurface/GlassSurface";
 import ProfileCard from "./components/ProfileCard/ProfileCard";
 
@@ -424,18 +425,33 @@ function App() {
           </div>
           <div className="strength-grid">
             {strengths.map((item) => (
-              <article data-reveal key={item.id}>
-                <div className="strength-card__top">
-                  <span>{item.id}</span>
-                  <Arrow diagonal />
-                </div>
-                <div>
-                  <p className="strength-card__en">{item.en}</p>
-                  <h3>{item.title}</h3>
-                  <p className="strength-card__body">{item.body}</p>
-                </div>
-                <span className="strength-card__meta">{item.meta}</span>
-              </article>
+              <BorderGlow
+                className="strength-glow-card"
+                edgeSensitivity={28}
+                glowColor="24 100 72"
+                backgroundColor="rgba(8, 9, 14, 0.58)"
+                borderRadius={22}
+                glowRadius={30}
+                glowIntensity={1.25}
+                coneSpread={23}
+                fillOpacity={0.2}
+                colors={["#0205fc", "#f5e400", "#ff0202"]}
+                reveal
+                key={item.id}
+              >
+                <article>
+                  <div className="strength-card__top">
+                    <span>{item.id}</span>
+                    <Arrow diagonal />
+                  </div>
+                  <div>
+                    <p className="strength-card__en">{item.en}</p>
+                    <h3>{item.title}</h3>
+                    <p className="strength-card__body">{item.body}</p>
+                  </div>
+                  <span className="strength-card__meta">{item.meta}</span>
+                </article>
+              </BorderGlow>
             ))}
           </div>
           <div className="tool-line" data-reveal>
