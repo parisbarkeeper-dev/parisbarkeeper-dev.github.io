@@ -33,38 +33,50 @@ const experiences = [
 const projects = [
   {
     id: "01",
-    title: "GLASS OBJECTS",
-    subtitle: "玻璃瓶产品可视化",
+    title: "ALIBABA GLASS PACKAGING",
+    subtitle: "玻璃瓶 Alibaba B2B 产品视觉系统",
     image: "/assets/project-glass.webp",
     width: 1536,
     height: 1024,
-    tags: ["3D MODELING", "CORONA", "MATERIAL"],
+    type: "CONCEPT CASE / 概念商业案例",
+    platform: "ALIBABA B2B",
+    goal: "突出玻璃材质、瓶型结构与 OEM 定制能力，让海外买家快速理解产品价值。",
+    outputs: ["产品主图", "材质卖点图", "OEM 定制图", "详情页结构"],
+    tags: ["3D RENDERING", "PRODUCT IMAGE", "DETAIL PAGE"],
     description:
-      "以材质真实性和产品轮廓为核心，精细处理玻璃折射、液体颜色与金属细节。",
+      "围绕采购决策组织产品信息，以可信渲染呈现玻璃折射、液体颜色与金属细节。",
     className: "project--wide",
   },
   {
     id: "02",
-    title: "FORM & PACKAGE",
-    subtitle: "包装系统与产品家族",
+    title: "OEM PACKAGING FAMILY",
+    subtitle: "PET / PP 包装产品家族与定制视觉",
     image: "/assets/project-package.webp",
     width: 1535,
     height: 1024,
-    tags: ["PACKAGING", "ART DIRECTION", "ECOMMERCE"],
+    type: "CONCEPT CASE / 概念商业案例",
+    platform: "ALIBABA · 1688",
+    goal: "统一多规格产品形象，清晰展示容量、结构、颜色与品牌定制选项。",
+    outputs: ["SKU 图", "尺寸图", "产品家族图", "定制说明图"],
+    tags: ["PACKAGING", "SKU SYSTEM", "OEM / ODM"],
     description:
-      "从异形结构、包装语言到电商呈现，建立可延展的产品视觉系统。",
+      "从包装结构到电商呈现建立统一视觉系统，帮助买家快速比较规格并理解定制范围。",
     className: "project--tall",
   },
   {
     id: "03",
-    title: "AI MATERIAL STUDY",
-    subtitle: "AI 辅助材质迭代",
+    title: "PERFUME LAUNCH VISUALS",
+    subtitle: "香水产品主图与场景视觉提案",
     image: "/assets/project-ai.webp",
     width: 1600,
     height: 800,
-    tags: ["AI WORKFLOW", "RETOUCH", "A/B TEST"],
+    type: "CONCEPT CASE / 概念商业案例",
+    platform: "AMAZON · SOCIAL",
+    goal: "在统一品牌气质下建立产品主图、场景图与多版本营销视觉。",
+    outputs: ["白底主图", "产品场景图", "卖点信息图", "多版本精修"],
+    tags: ["PRODUCT VISUAL", "AI RETOUCH", "SCENE IMAGE"],
     description:
-      "将生成式工具引入精修与版本迭代，在保持视觉标准的同时显著提升修改效率。",
+      "结合三维渲染与 AI 辅助精修，高效完成场景探索、材质调整和营销版本迭代。",
     className: "project--tall",
   },
 ];
@@ -72,31 +84,31 @@ const projects = [
 const strengths = [
   {
     id: "01",
-    title: "形态与材质",
-    en: "FORM / MATERIAL",
-    body: "熟练使用 3ds Max、Corona 与 V-Ray，能把抽象概念转化为可信、细腻的产品视觉。",
-    meta: "MODELING · RENDERING",
+    title: "Alibaba 详情页",
+    en: "ALIBABA B2B PAGE",
+    body: "按照海外采购者的浏览逻辑组织产品信息，将规格、材质、应用场景与 OEM / ODM 卖点转化为清晰的详情页内容。",
+    meta: "STRUCTURE · SELLING POINTS",
   },
   {
     id: "02",
-    title: "AI 视觉提效",
-    en: "AI / ITERATION",
-    body: "使用 Nano Banana、生成式填充等工具快速调整材质、Logo 与色彩，缩短迭代链路。",
-    meta: "EFFICIENCY +80%",
+    title: "产品图系统",
+    en: "PRODUCT IMAGE SYSTEM",
+    body: "可独立完成产品主图、SKU 图、尺寸图、拆解图、场景图与卖点信息图，保持整套视觉一致、易读、可交付。",
+    meta: "MAIN · SKU · INFOGRAPHIC",
   },
   {
     id: "03",
-    title: "商业化落地",
-    en: "COMMERCE / OUTPUT",
-    body: "理解天猫、京东、1688 与亚马逊等平台的视觉需求，能够衔接运营与转化目标。",
-    meta: "MULTI-PLATFORM",
+    title: "包装与三维视觉",
+    en: "PACKAGING / 3D",
+    body: "熟悉玻璃瓶、PET / PP 塑料罐及护肤品包装类产品，能够通过建模、材质和灯光准确呈现产品结构与质感。",
+    meta: "MODELING · RENDERING",
   },
   {
     id: "04",
-    title: "全流程协同",
-    en: "SYSTEM / DELIVERY",
-    body: "覆盖产品建模、包装设计、后期精修与营销素材，让设计概念稳定走到最终交付。",
-    meta: "END TO END",
+    title: "AI 辅助精修",
+    en: "AI-ASSISTED RETOUCH",
+    body: "将生成式工具用于场景探索、材质调整、Logo 替换与版本迭代，在保证品牌一致性的前提下缩短修改链路。",
+    meta: "RETOUCH · ITERATION",
   },
 ];
 
@@ -124,13 +136,15 @@ function App() {
       ".section-label span",
       ".hero__eyebrow span",
       ".hero__index",
-      ".portrait-card span",
       ".contact-row > span",
       ".metric__number",
       ".metric__unit",
       ".timeline__row > span",
       ".project__id",
-      ".project__view",
+      ".project__type",
+      ".project__meta dt",
+      ".project__meta dd",
+      ".project__tags span",
       ".strength-card__meta",
       ".tool-line span",
       ".contact__top span",
@@ -206,9 +220,9 @@ function App() {
           GP<span>®</span>
         </a>
         <nav aria-label="主导航">
+          <a href="#skills">能力</a>
+          <a href="#work">作品</a>
           <a href="#about">经历</a>
-          <a href="#work">项目</a>
-          <a href="#strengths">优势</a>
         </nav>
         <GlassSurface
           width={132}
@@ -233,11 +247,11 @@ function App() {
       <section className="hero" id="top">
         <div className="hero__content content">
           <div className="hero__eyebrow" data-reveal>
-            <span>BASED IN GUANGZHOU</span>
+            <span>CROSS-BORDER E-COMMERCE VISUAL</span>
             <span>AVAILABLE FOR WORK</span>
           </div>
           <div className="hero__title-wrap" data-reveal>
-            <p>VISUAL / AI / PRODUCT DESIGNER</p>
+            <p>跨境电商视觉设计师 / E-COMMERCE VISUAL DESIGNER</p>
             <h1>
               <span>GAO</span>
               <span className="hero__title-offset">PENG</span>
@@ -245,9 +259,9 @@ function App() {
           </div>
           <div className="hero__footer">
             <p data-reveal>
-              从产品形态到商业视觉，
+              专注 Alibaba / Amazon 产品主图、详情页，
               <br />
-              构建清晰、准确、有质感的设计表达。
+              以及 SKU、场景图与包装视觉设计。
             </p>
             <GlassSurface
               width={72}
@@ -267,159 +281,23 @@ function App() {
                 <Arrow diagonal />
               </a>
             </GlassSurface>
-            <span className="hero__index">PORTFOLIO / 26</span>
+            <span className="hero__index">ALIBABA · AMAZON · 1688</span>
           </div>
         </div>
       </section>
 
-      <section className="about section" id="about">
+      <section className="strengths section" id="skills">
         <div className="content">
           <div className="section-label" data-reveal>
-            <span>01 / PROFILE</span>
-            <span>视觉与产品之间</span>
-          </div>
-
-          <div className="about__intro">
-            <div className="portrait-card" data-reveal>
-              <div className="portrait-card__grid" />
-              <div className="portrait-card__initials">GP</div>
-              <div className="portrait-card__accent" />
-              <span>VISUAL COMMUNICATION</span>
-            </div>
-            <div className="about__copy" data-reveal>
-              <p className="kicker">HELLO, I AM GAO PENG.</p>
-              <h2>
-                用<span>三维构建形态</span>，
-                <br />
-                用视觉连接产品与市场。
-              </h2>
-              <p className="about__body">
-                我是一名视觉 / AI / 产品设计师，毕业于上海大学视觉传达设计专业。
-                工作实践覆盖室内效果图、家具产品、塑料包装与玻璃瓶电商视觉。
-                我关心材质如何被感知，也关心设计如何更高效地走向市场。
-              </p>
-              <div className="contact-row">
-                <a href="mailto:parisbarkeeper@gmail.com">
-                  parisbarkeeper@gmail.com
-                </a>
-                <a href="tel:+8617666573428">+86 176 6657 3428</a>
-                <span>广州，中国</span>
-              </div>
-            </div>
-          </div>
-
-          <div className="metrics">
-            <article data-reveal>
-              <span className="metric__number">04</span>
-              <span className="metric__unit">YEARS</span>
-              <p>跨行业设计实践</p>
-            </article>
-            <article data-reveal>
-              <span className="metric__number">80</span>
-              <span className="metric__unit">%</span>
-              <p>AI 辅助修改提效</p>
-            </article>
-            <article data-reveal>
-              <span className="metric__number">04</span>
-              <span className="metric__unit">PLATFORMS</span>
-              <p>多平台商业输出</p>
-            </article>
-            <article data-reveal>
-              <span className="metric__number">10</span>
-              <span className="metric__unit">+ TOOLS</span>
-              <p>完整视觉工具链</p>
-            </article>
-          </div>
-
-          <div className="timeline">
-            <div className="timeline__heading" data-reveal>
-              <p>EXPERIENCE</p>
-              <p>从效果图到产品系统</p>
-            </div>
-            {experiences.map((item, index) => (
-              <article className="timeline__row" data-reveal key={item.company}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <time>{item.period}</time>
-                <div>
-                  <h3>{item.company}</h3>
-                  <p>{item.summary}</p>
-                </div>
-                <strong>{item.role}</strong>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="work section" id="work">
-        <div className="content">
-          <div className="section-label section-label--light" data-reveal>
-            <span>02 / SELECTED WORK</span>
-            <span>精选项目</span>
-          </div>
-          <div className="work__heading" data-reveal>
-            <h2>
-              SELECTED
-              <br />
-              <span>WORKS</span>
-            </h2>
-            <p>
-              建模、材质、包装与 AI 工作流的交叉实践。
-            </p>
-          </div>
-
-          <div className="projects">
-            {projects.map((project) => (
-              <article
-                className={`project ${project.className}`}
-                data-reveal
-                key={project.id}
-              >
-                <div className="project__image-wrap">
-                  <img
-                    src={project.image}
-                    alt={project.subtitle}
-                    width={project.width}
-                    height={project.height}
-                    loading="lazy"
-                    decoding="async"
-                    fetchPriority="low"
-                  />
-                  <span className="project__id">{project.id}</span>
-                  <span className="project__view">
-                    VIEW <Arrow diagonal />
-                  </span>
-                </div>
-                <div className="project__meta">
-                  <div>
-                    <p>{project.subtitle}</p>
-                    <h3>{project.title}</h3>
-                  </div>
-                  <p>{project.description}</p>
-                  <ul>
-                    {project.tags.map((tag) => (
-                      <li key={tag}>{tag}</li>
-                    ))}
-                  </ul>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="strengths section" id="strengths">
-        <div className="content">
-          <div className="section-label" data-reveal>
-            <span>03 / CAPABILITIES</span>
-            <span>个人优势</span>
+            <span>01 / CORE SKILLS</span>
+            <span>跨境电商视觉交付能力</span>
           </div>
           <div className="strengths__heading" data-reveal>
-            <h2>DESIGN WITH RANGE.</h2>
+            <h2>VISUALS BUILT TO SELL.</h2>
             <p>
-              在视觉表达、产品理解和商业目标之间，
+              从产品理解、三维呈现到详情页设计，
               <br />
-              保持系统化、可交付的工作方式。
+              将复杂卖点转化为海外买家易理解的商业视觉。
             </p>
           </div>
           <div className="strength-grid">
@@ -439,13 +317,163 @@ function App() {
             ))}
           </div>
           <div className="tool-line" data-reveal>
+            <span>ALIBABA B2B</span>
+            <span>PRODUCT IMAGE</span>
+            <span>DETAIL PAGE</span>
             <span>3DS MAX</span>
             <span>CORONA</span>
-            <span>V-RAY</span>
             <span>PHOTOSHOP</span>
-            <span>ILLUSTRATOR</span>
             <span>AI WORKFLOW</span>
-            <span>PREMIERE</span>
+          </div>
+        </div>
+      </section>
+
+      <section className="work section" id="work">
+        <div className="content">
+          <div className="section-label section-label--light" data-reveal>
+            <span>02 / SELECTED CASES</span>
+            <span>产品图 · 详情页 · 包装视觉</span>
+          </div>
+          <div className="work__heading" data-reveal>
+            <h2>
+              COMMERCE
+              <br />
+              <span>CASES</span>
+            </h2>
+            <p>
+              以下为概念商业案例，用于展示从产品理解、视觉策略到电商交付的完整方法。
+            </p>
+          </div>
+          <div className="projects">
+            {projects.map((project) => (
+              <article
+                className={`project ${project.className}`}
+                data-reveal
+                key={project.id}
+              >
+                <div className="project__image-wrap">
+                  <img
+                    src={project.image}
+                    alt={project.subtitle}
+                    width={project.width}
+                    height={project.height}
+                    loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
+                  />
+                  <span className="project__id">{project.id}</span>
+                  <span className="project__type">
+                    {project.type}
+                  </span>
+                </div>
+                <div className="project__meta">
+                  <div className="project__title">
+                    <p>{project.subtitle}</p>
+                    <h3>{project.title}</h3>
+                  </div>
+                  <div className="project__summary">
+                    <p>{project.description}</p>
+                    <dl>
+                      <div>
+                        <dt>PLATFORM</dt>
+                        <dd>{project.platform}</dd>
+                      </div>
+                      <div>
+                        <dt>DESIGN GOAL</dt>
+                        <dd>{project.goal}</dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <div className="project__deliverables">
+                    <p>DELIVERABLES</p>
+                    <ul>
+                      {project.outputs.map((output) => (
+                        <li key={output}>{output}</li>
+                      ))}
+                    </ul>
+                    <div className="project__tags">
+                      {project.tags.map((tag) => (
+                        <span key={tag}>{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="about section" id="about">
+        <div className="content">
+          <div className="section-label" data-reveal>
+            <span>03 / ABOUT & EXPERIENCE</span>
+            <span>产品视觉与商业表达</span>
+          </div>
+
+          <div className="about__intro">
+            <div className="about__copy" data-reveal>
+              <p className="kicker">HELLO, I AM GAO PENG.</p>
+              <h2>
+                把<span>产品卖点</span>，
+                <br />
+                转化为清晰可信的电商视觉。
+              </h2>
+              <p className="about__body">
+                我是一名跨境电商视觉设计师，毕业于上海大学视觉传达设计专业。
+                近年的工作重点集中在玻璃瓶、PET / PP 塑料包装、香水与护肤品类产品视觉。
+                能够从三维建模、材质渲染到产品主图、SKU 图、场景图与详情页完成完整交付，
+                并将结构、材质、容量和 OEM / ODM 定制信息转化为海外买家易理解的视觉内容。
+              </p>
+              <div className="contact-row">
+                <a href="mailto:parisbarkeeper@gmail.com">
+                  parisbarkeeper@gmail.com
+                </a>
+                <a href="tel:+8617666573428">+86 176 6657 3428</a>
+                <span>广州，中国</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="metrics">
+            <article data-reveal>
+              <span className="metric__number">B2B</span>
+              <span className="metric__unit">ALIBABA</span>
+              <p>详情页信息结构与卖点表达</p>
+            </article>
+            <article data-reveal>
+              <span className="metric__number">3D</span>
+              <span className="metric__unit">VISUAL</span>
+              <p>产品建模、材质与场景渲染</p>
+            </article>
+            <article data-reveal>
+              <span className="metric__number">OEM</span>
+              <span className="metric__unit">ODM</span>
+              <p>定制范围与产品规格可视化</p>
+            </article>
+            <article data-reveal>
+              <span className="metric__number">AI</span>
+              <span className="metric__unit">WORKFLOW</span>
+              <p>精修、场景探索与版本迭代</p>
+            </article>
+          </div>
+
+          <div className="timeline">
+            <div className="timeline__heading" data-reveal>
+              <p>EXPERIENCE</p>
+              <p>从三维表现到电商产品视觉</p>
+            </div>
+            {experiences.map((item, index) => (
+              <article className="timeline__row" data-reveal key={item.company}>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <time>{item.period}</time>
+                <div>
+                  <h3>{item.company}</h3>
+                  <p>{item.summary}</p>
+                </div>
+                <strong>{item.role}</strong>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -455,21 +483,24 @@ function App() {
         <div className="content contact__content">
           <div className="contact__top" data-reveal>
             <span>04 / CONTACT</span>
-            <span>LET'S MAKE SOMETHING PRECISE.</span>
+            <span>AVAILABLE FOR E-COMMERCE VISUAL ROLES</span>
           </div>
           <div className="contact__main" data-reveal>
             <div className="contact__copy">
-              <p>下一个项目 / 一次交流 / 一个新想法</p>
+              <p>
+                正在寻找跨境电商视觉设计 / 电商美工岗位，
+                也接受产品图、详情页与包装视觉项目合作。
+              </p>
               <h2>
                 LET'S
                 <br />
-                <span>TALK.</span>
+                <span>WORK.</span>
               </h2>
               <a
                 href="mailto:parisbarkeeper@gmail.com"
                 className="contact__mail"
               >
-                <span>发送邮件</span>
+                <span>发送岗位或项目需求</span>
                 <strong>parisbarkeeper@gmail.com</strong>
                 <Arrow diagonal />
               </a>
@@ -479,10 +510,10 @@ function App() {
                 avatarUrl="/assets/profile-avatar.svg"
                 miniAvatarUrl="/assets/profile-avatar.svg"
                 name="GAO PENG"
-                title="VISUAL / AI / PRODUCT DESIGNER"
+                title="CROSS-BORDER E-COMMERCE VISUAL DESIGNER"
                 handle="gaopeng.design"
                 status="AVAILABLE FOR WORK"
-                contactText="CONTACT"
+                contactText="EMAIL ME"
                 showUserInfo
                 enableTilt
                 behindGlowEnabled

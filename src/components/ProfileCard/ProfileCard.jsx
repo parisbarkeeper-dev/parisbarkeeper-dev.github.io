@@ -32,7 +32,7 @@ function ProfileCardComponent({
   enableTilt = true,
   miniAvatarUrl,
   name = "Gao Peng",
-  title = "Visual / AI / Product Designer",
+  title = "Cross-border E-commerce Visual Designer",
   handle = "gaopeng.design",
   status = "Available",
   contactText = "Contact",
